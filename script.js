@@ -23,18 +23,6 @@ nav.querySelectorAll('a').forEach(link => {
   });
 });
 
-// Portfolio iframe scale to fit container
-function scalePortfolioIframe() {
-  const wrap = document.querySelector('.pf-iframe-wrap');
-  const iframe = document.querySelector('.pf-iframe');
-  if (!wrap || !iframe) return;
-  const scale = wrap.offsetWidth / 1280;
-  iframe.style.transform = 'scale(' + scale + ')';
-  iframe.style.height = Math.ceil(260 / scale) + 'px';
-}
-scalePortfolioIframe();
-window.addEventListener('resize', scalePortfolioIframe);
-
 // Smooth scroll with fixed header offset
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
